@@ -1,0 +1,17 @@
+.projects-container{
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 0 16px;
+}
+@media (max-width: 640px){
+.projects-container{
+    max-width: 100%;
+    padding: 0 16px;
+    margin: 60px auto;
+}
+}
+@media (min-width: 641px) and (max-width: 1024px){
+    .projects-container{
+        max-width: 650px;
+    }
+}
