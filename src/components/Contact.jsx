@@ -1,5 +1,5 @@
 import SectionHeading from "./SectionHeading";
-import "../styles/contact.css";
+import "../styles/Contact.css";
 import { BsEnvelopeAtFill } from "react-icons/bs";
 
 export default function Contact() {
