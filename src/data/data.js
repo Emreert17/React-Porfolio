@@ -31,6 +31,14 @@ export const projects_Data = [
     image: "/ToDoList.png",
     link: "https://github.com/Emreert17/React-ToDoList2",
   },
+  {
+    id: 5,
+    title: "Quiz App",
+    description:
+      " A simple and interactive Quiz Application built with React.Users can test their knowledge by answering multiple-choice questions, track their score in real-time, and review their selected answers at the end of the quiz.",
+    image: "/QuizApp.png",
+    link: "https://github.com/Emreert17/React-QuizApp",
+  },
 ];
 
 export const education_details = [
