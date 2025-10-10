@@ -1,3 +1,39 @@
+import {
+  FaJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaBootstrap,
+  FaGitAlt,
+  FaGithub,
+  FaReact,
+} from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+
+export const skillsData = [
+  {
+    id: "frontend",
+    category: "Frontend",
+    items: [
+      { name: "React.js", icon: FaReact, color: "#33A1E0" },
+      { name: "JavaScript", icon: FaJs, color: "#FFE100" },
+      { name: "HTML5", icon: FaHtml5, color: "#FF9B00" },
+      { name: "CSS", icon: FaCss3Alt, color: "#1C6EA4" },
+      { name: "Bootstrap", icon: FaBootstrap, color: "#9929EA" },
+      { name: "Tailwind", icon: RiTailwindCssFill, color: "#33A1E0" },
+      { name: "Responsive Design" },
+      { name: "Single Page Applications" },
+    ],
+  },
+  {
+    id: "tools",
+    category: "Tools",
+    items: [
+      { name: "Git", icon: FaGitAlt, color: "#DC2525" },
+      { name: "GitHub", icon: FaGithub, color: "#333" },
+    ],
+  },
+];
+
 export const projects_Data = [
   {
     id: 1,
