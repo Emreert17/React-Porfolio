@@ -6,8 +6,11 @@ import {
   FaGitAlt,
   FaGithub,
   FaReact,
+  FaPager,
 } from "react-icons/fa";
+import { TiThMenu } from "react-icons/ti";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { color } from "framer-motion";
 
 export const skillsData = [
   {
@@ -20,8 +23,8 @@ export const skillsData = [
       { name: "CSS", icon: FaCss3Alt, color: "#1C6EA4" },
       { name: "Bootstrap", icon: FaBootstrap, color: "#9929EA" },
       { name: "Tailwind", icon: RiTailwindCssFill, color: "#33A1E0" },
-      { name: "Responsive Design" },
-      { name: "Single Page Applications" },
+      { name: "Responsive Design", icon: TiThMenu, color: "#333" },
+      { name: "Single Page Applications", icon: FaPager, color: "#379777" },
     ],
   },
   {

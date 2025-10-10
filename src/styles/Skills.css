@@ -1,5 +1,5 @@
 .skills-container{
-    max-width: 800px;
+    max-width: 700px;
     margin: 150px auto;
 }
 .skills-button-container{
@@ -28,15 +28,16 @@
 }
 .skill{
     border: 1px solid #ccc;
-     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 5px;
     background-color: oklch(97% 0.001 106.424);
     padding: 25px 12px;
+    text-align: center;
     display: flex;
-    gap: 4px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 4px;
 }
 .skill:hover{
     transition: ease-in-out .4s;

@@ -20,7 +20,7 @@ export default function Intro() {
             </p>
             <div className="button-group">
               <a
-                href="https://github.com/Emreert17/Emreert17"
+                href="https://github.com/Emreert17"
                 className="btn-intro"
                 target="_blank"
               >
