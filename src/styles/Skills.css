@@ -22,12 +22,14 @@
 }
 .skills-content-container{
     margin-top: 30px;
+    justify-content: center;
     display: grid;
     gap: 30px;
-    grid-template-columns:repeat(4,1fr) ;
+    grid-template-columns:repeat(4,120px) ;
 }
 .skill{
     border: 1px solid #ccc;
+    height: 80px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 5px;
     background-color: oklch(97% 0.001 106.424);
@@ -53,10 +55,12 @@
 .skills-content-container{
     justify-content: center;
     gap: 20px;
-    grid-template-columns:repeat(2,1fr) ;
+    grid-template-columns:repeat(2,110px) ;
 }
 .skill{
   padding: 16px 8px;
+  height: 70px;
+  font-size: 14px;
 }
 }
 @media (min-width: 641px) and (max-width: 1024px){
