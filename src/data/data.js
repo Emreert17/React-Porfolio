@@ -8,9 +8,9 @@ import {
   FaReact,
   FaPager,
 } from "react-icons/fa";
+import { SiRedux } from "react-icons/si";
 import { TiThMenu } from "react-icons/ti";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { color } from "framer-motion";
 
 export const skillsData = [
   {
@@ -21,7 +21,7 @@ export const skillsData = [
       { name: "JavaScript", icon: FaJs, color: "#FFE100" },
       { name: "HTML5", icon: FaHtml5, color: "#FF9B00" },
       { name: "CSS", icon: FaCss3Alt, color: "#1C6EA4" },
-      { name: "Bootstrap", icon: FaBootstrap, color: "#9929EA" },
+      { name: "Redux", icon: SiRedux, color: "#9929EA" },
       { name: "Tailwind", icon: RiTailwindCssFill, color: "#33A1E0" },
       { name: "Responsive Design", icon: TiThMenu, color: "#333" },
       { name: "Single Page Applications", icon: FaPager, color: "#379777" },
@@ -40,11 +40,12 @@ export const skillsData = [
 export const projects_Data = [
   {
     id: 1,
-    title: "Investment Calculator",
+    title: "Food Delivery App",
     description:
-      " A financial tool that calculates projected returns based on initial investment, annual contribution, duration, and expected return rate. Users can adjust inputs to visualize how their investment grows over time.",
-    image: "/InvestmentCalculator.png",
-    link: "https://github.com/Emreert17/Emreert17",
+      "Food Delivery App built with React and Redux featuring user authentication, dynamic menus, and cart management. Users can log in, browse dishes, filter and sort items. ",
+    image: "/FoodApp.png",
+    link: "https://github.com/Emreert17/React-Redux-FoodDeliveryApp",
+    isRedux: true,
   },
   {
     id: 2,
