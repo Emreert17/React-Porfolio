@@ -61,7 +61,8 @@ export const projects_Data = [
     description:
       "  A responsive application that retrieves live weather data from an external API, showing temperature, conditions, and location details. Users can search by city name and get instant, accurate forecasts.",
     image: "/WeatherApp.png",
-    link: "https://github.com/Emreert17/Emreert17",
+    link: "https://github.com/Emreert17/React-Redux-Query-WeatherApp",
+    isRedux: true,
   },
   {
     id: 4,

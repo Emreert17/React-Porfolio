@@ -16,7 +16,7 @@ export default function Project({ project }) {
             <FaJs style={{ paddingLeft: "5px" }} size={30} color="#FFE100" />
             {project.isRedux && (
               <span>
-                <SiRedux size={30} color="#62109F" />
+                <SiRedux size={30} color="#9929EA" />
               </span>
             )}
           </p>
