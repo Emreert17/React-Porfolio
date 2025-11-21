@@ -1,15 +1,20 @@
 import { motion } from "framer-motion";
 import "../styles/NavBar.css";
+import { links } from "../data/data";
+import React, { useEffect, useState } from "react";
 
 export default function NavBar({ activeSection }) {
-  const links = [
-    { id: "home", label: "home" },
-    { id: "projects", label: "projects" },
-    { id: "skills", label: "skills" },
-    { id: "experience", label: "experience" },
-    { id: "education", label: "education" },
-    { id: "contact", label: "contact" },
-  ];
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth <= 671);
+    }
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <nav className="navbar">
@@ -26,7 +31,7 @@ export default function NavBar({ activeSection }) {
             href={`#${link.id}`}
             className={`nav-link ${activeSection === link.id ? "active" : ""}`}
           >
-            {link.label}
+            {isMobile ? React.createElement(link.icon) : link.label}
           </a>
         </div>
       ))}

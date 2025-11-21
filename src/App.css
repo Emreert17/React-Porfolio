@@ -8,8 +8,21 @@ body{
   margin: 0px;
   box-sizing: border-box;
   font-family: 'Kumbh Sans', sans-serif;
+  position: relative;
+}
+body.dark{
+background-color: black;
 }
 header{
   display: flex;
   justify-content: center;
+}
+.btn-theme {
+  position: fixed;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  padding: 12px 15px;
+  bottom: 12px;
+  right: 12px;
 }

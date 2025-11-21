@@ -6,6 +6,9 @@
     color: #333;
     text-align: center;
 }
+.section-title.dark{
+  color: #fff;
+}
 @media screen and (max-width: 768px) {
   .section-title{
     font-size: 25px;

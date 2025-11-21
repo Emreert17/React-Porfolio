@@ -1,7 +1,9 @@
+import React from "react";
 import ParticleContainer from "./ParticleContainer";
-import { BsLinkedin } from "react-icons/bs";
-import { FaGithub } from "react-icons/fa";
 import "../styles/Intro.css";
+import { intro_info } from "../data/data";
+
+const info = intro_info[0];
 
 export default function Intro() {
   return (
@@ -10,29 +12,23 @@ export default function Intro() {
         <ParticleContainer />
         <div className="inner-particle-container">
           <div className="intro-content">
-            <img className="intro-picture" src="/intro-pic.jpg" alt="" />
-            <p className="intro-text">
-              Hello I'm Emre, Senior Software Engineering student at Istanbul
-              Aydın University with expertise in frontend development using
-              HTML, CSS, JavaScript, and React. Skilled in Java programming and
-              passionate about creating modern, user-focused web interfaces for
-              real-world projects.
-            </p>
+            <img
+              className="intro-picture"
+              src={info.image}
+              alt={info.imageDesc}
+            />
+            <p className="intro-text">{info.description}</p>
             <div className="button-group">
-              <a
-                href="https://github.com/Emreert17"
-                className="btn-intro"
-                target="_blank"
-              >
-                GitHub <FaGithub />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/emre-ertu%C4%9Frul-3403592b2/"
-                className="btn-intro btn-2"
-                target="_blank"
-              >
-                LinkedIn <BsLinkedin />
-              </a>
+              {info.links.map((link) => (
+                <a
+                  className={`btn-intro ${link.id === 2 ? "btn-2" : ""}`}
+                  key={link.id}
+                  href={link.link}
+                  target="_blank"
+                >
+                  {link.title} {React.createElement(link.icon)}
+                </a>
+              ))}
             </div>
           </div>
         </div>

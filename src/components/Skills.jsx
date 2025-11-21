@@ -3,8 +3,6 @@ import { skillsData } from "../data/data";
 import "../styles/Skills.css";
 import { useState } from "react";
 import Skill from "./Skill";
-import { motion } from "framer-motion";
-import { AnimatePresence } from "framer-motion";
 
 export default function Skills() {
   const [activeTab, setActiveTab] = useState("frontend");

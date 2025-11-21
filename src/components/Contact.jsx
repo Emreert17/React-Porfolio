@@ -1,8 +1,10 @@
 import SectionHeading from "./SectionHeading";
 import "../styles/Contact.css";
 import { BsEnvelopeAtFill } from "react-icons/bs";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Contact() {
+  const { theme } = useTheme();
   return (
     <>
       <section id="contact" className="contact-container">
@@ -14,7 +16,9 @@ export default function Contact() {
           >
             <BsEnvelopeAtFill size={50} color="#33A1E0" />
           </a>
-          <p>If you want to contact me click up here.</p>
+          <p className={`${theme === "dark" ? "dark" : ""}`}>
+            If you want to contact me click up here.
+          </p>
         </div>
       </section>
     </>

@@ -2,37 +2,51 @@ import {
   FaJs,
   FaHtml5,
   FaCss3Alt,
-  FaBootstrap,
   FaGitAlt,
   FaGithub,
   FaReact,
-  FaPager,
 } from "react-icons/fa";
+import { BsLinkedin } from "react-icons/bs";
 import { SiRedux } from "react-icons/si";
 import { TiThMenu } from "react-icons/ti";
-import { RiTailwindCssFill } from "react-icons/ri";
+import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
+import { IoIosHome } from "react-icons/io";
+import { VscCode } from "react-icons/vsc";
+import {
+  LuFolderOpen,
+  LuMail,
+  LuGraduationCap,
+  LuBriefcase,
+} from "react-icons/lu";
 
-export const skillsData = [
+export const links = [
+  { id: "home", label: "home", icon: IoIosHome },
+  { id: "projects", label: "projects", icon: LuFolderOpen },
+  { id: "skills", label: "skills", icon: VscCode },
+  { id: "experience", label: "experience", icon: LuBriefcase },
+  { id: "education", label: "education", icon: LuGraduationCap },
+  { id: "contact", label: "contact", icon: LuMail },
+];
+
+export const intro_info = [
   {
-    id: "frontend",
-    category: "Frontend",
-    items: [
-      { name: "React.js", icon: FaReact, color: "#33A1E0" },
-      { name: "JavaScript", icon: FaJs, color: "#FFE100" },
-      { name: "HTML5", icon: FaHtml5, color: "#FF9B00" },
-      { name: "CSS", icon: FaCss3Alt, color: "#1C6EA4" },
-      { name: "Redux", icon: SiRedux, color: "#9929EA" },
-      { name: "Tailwind", icon: RiTailwindCssFill, color: "#33A1E0" },
-      { name: "Responsive Design", icon: TiThMenu, color: "#333" },
-      { name: "Single Page Applications", icon: FaPager, color: "#379777" },
-    ],
-  },
-  {
-    id: "tools",
-    category: "Tools",
-    items: [
-      { name: "Git", icon: FaGitAlt, color: "#DC2525" },
-      { name: "GitHub", icon: FaGithub, color: "#333" },
+    description:
+      "Hi, I'm Emre! I'm a Senior Software Engineering student at Istanbul Aydın University, mainly focused on frontend development. I work with HTML, CSS, JavaScript, and React and I also have a solid background in Java. I love creating clean, modern, and user-centered web interfaces that solve real problems.",
+    image: "/intro-pic.jpg",
+    imageDesc: "profile-picture",
+    links: [
+      {
+        id: 1,
+        title: "Github",
+        icon: FaGithub,
+        link: "https://github.com/Emreert17",
+      },
+      {
+        id: 2,
+        title: "LinkedIn",
+        icon: BsLinkedin,
+        link: "https://www.linkedin.com/in/emre-ertu%C4%9Frul-3403592b2/",
+      },
     ],
   },
 ];
@@ -79,6 +93,31 @@ export const projects_Data = [
       " A simple and interactive Quiz Application built with React.Users can test their knowledge by answering multiple-choice questions, track their score in real-time, and review their selected answers at the end of the quiz.",
     image: "/QuizApp.png",
     link: "https://github.com/Emreert17/React-QuizApp",
+  },
+];
+
+export const skillsData = [
+  {
+    id: "frontend",
+    category: "Frontend",
+    items: [
+      { name: "React.js", icon: FaReact, color: "#33A1E0" },
+      { name: "JavaScript", icon: FaJs, color: "#FFE100" },
+      { name: "Next.js", icon: RiNextjsFill, color: "#333" },
+      { name: "HTML5", icon: FaHtml5, color: "#FF9B00" },
+      { name: "CSS", icon: FaCss3Alt, color: "#1C6EA4" },
+      { name: "Redux", icon: SiRedux, color: "#9929EA" },
+      { name: "Tailwind", icon: RiTailwindCssFill, color: "#33A1E0" },
+      { name: "Responsive Design", icon: TiThMenu, color: "#333" },
+    ],
+  },
+  {
+    id: "tools",
+    category: "Tools",
+    items: [
+      { name: "Git", icon: FaGitAlt, color: "#DC2525" },
+      { name: "GitHub", icon: FaGithub, color: "#333" },
+    ],
   },
 ];
 

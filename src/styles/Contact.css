@@ -1,6 +1,7 @@
 .contact-container{
     max-width: 800px;
-    margin: 100px auto;
+    margin: auto;
+    padding-bottom: 60px;
 }
 .inner-contact-container{
     display: flex;
@@ -15,6 +16,9 @@
 }
 .inner-contact-container p{
     font-size: 18px;
+}
+.inner-contact-container p.dark{
+    color: #fff;
 }
  @media (max-width: 640px){
     .contact-container{
