@@ -43,8 +43,8 @@
 }
  @media (max-width: 671px){
   .nav-item-wrapper {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,7 +58,7 @@
   }
   .nav-link {
     padding: 0 px;
-    font-size: 18px; 
+    font-size: 20px; 
   }
    .nav-highlight {
     border-radius: 50%;
