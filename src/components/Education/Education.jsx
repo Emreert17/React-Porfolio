@@ -1,7 +1,7 @@
-import SectionHeading from "./SectionHeading";
-import { education_details } from "../data/data";
+import SectionHeading from "../SectionHeader/SectionHeading";
+import { education_details } from "../../data/data";
 import { FaGraduationCap } from "react-icons/fa";
-import "../styles/Education.css";
+import "../../styles/Education.css";
 
 export default function Education() {
   return (

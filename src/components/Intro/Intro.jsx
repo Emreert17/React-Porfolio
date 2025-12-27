@@ -1,8 +1,7 @@
 import React from "react";
 import ParticleContainer from "./ParticleContainer";
-import "../styles/Intro.css";
-import { intro_info } from "../data/data";
-
+import "../../styles/Intro.css";
+import { intro_info } from "../../data/data";
 const info = intro_info[0];
 
 export default function Intro() {

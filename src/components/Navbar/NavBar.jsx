@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
-import "../styles/NavBar.css";
-import { links } from "../data/data";
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import "../../styles/NavBar.css";
+import { links } from "../../data/data";
 
 export default function NavBar({ activeSection }) {
   const [isMobile, setIsMobile] = useState(false);

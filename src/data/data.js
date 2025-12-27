@@ -7,8 +7,9 @@ import {
   FaReact,
 } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
-import { SiRedux } from "react-icons/si";
-import { TiThMenu } from "react-icons/ti";
+import { SiRedux, SiSap } from "react-icons/si";
+import { BiLogoTypescript } from "react-icons/bi";
+import { PiBracketsCurly } from "react-icons/pi";
 import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
 import { IoIosHome } from "react-icons/io";
 import { VscCode } from "react-icons/vsc";
@@ -18,6 +19,8 @@ import {
   LuGraduationCap,
   LuBriefcase,
 } from "react-icons/lu";
+import opetLogo from "/Opet_logo.svg";
+import enocaLogo from "/enoca_logo.jpg";
 
 export const links = [
   { id: "home", label: "home", icon: IoIosHome },
@@ -63,11 +66,12 @@ export const projects_Data = [
   },
   {
     id: 2,
-    title: "Tic Tac Toe Game",
+    title: "Expense Tracker",
     description:
-      "  An interactive web-based game for two players, featuring a clean interface and responsive design. Tracks turns, detects wins or draws, and allows for quick game restarts.",
-    image: "/TicTacToeGame.png",
-    link: "https://github.com/Emreert17/Emreert17",
+      "Track income and expenses, categorize spending, set budget goals, and get a clear overview of your finances. Built with a clean, interactive React interface for a seamless user experience.",
+    image: "/budgetapp.png",
+    link: "https://github.com/Emreert17/React-Redux-Expense-Tracker",
+    isRedux: true,
   },
   {
     id: 3,
@@ -104,11 +108,11 @@ export const skillsData = [
       { name: "React.js", icon: FaReact, color: "#33A1E0" },
       { name: "JavaScript", icon: FaJs, color: "#FFE100" },
       { name: "Next.js", icon: RiNextjsFill, color: "#333" },
+      { name: "TypeScript", icon: BiLogoTypescript, color: "#1C6EA4" },
       { name: "HTML5", icon: FaHtml5, color: "#FF9B00" },
       { name: "CSS", icon: FaCss3Alt, color: "#1C6EA4" },
       { name: "Redux", icon: SiRedux, color: "#9929EA" },
       { name: "Tailwind", icon: RiTailwindCssFill, color: "#33A1E0" },
-      { name: "Responsive Design", icon: TiThMenu, color: "#333" },
     ],
   },
   {
@@ -118,6 +122,30 @@ export const skillsData = [
       { name: "Git", icon: FaGitAlt, color: "#DC2525" },
       { name: "GitHub", icon: FaGithub, color: "#333" },
     ],
+  },
+];
+
+export const experience_Data = [
+  {
+    id: 1,
+    date: "November 2025 - Present",
+    title: "Frontend Internship",
+    subtitle: "enoca",
+    description:
+      "Gained practical experience in React frontend development, focusing on UI components and basic state management. Assisted in building and updating user interfaces by working with reusable components and handling simple application state.",
+    logo: enocaLogo,
+    icon: PiBracketsCurly,
+    logoStyle: { borderRadius: "999px" },
+  },
+  {
+    id: 2,
+    date: "July 2024 - August 2024",
+    title: "SAP Internship",
+    subtitle: "Opet Headquarters",
+    description:
+      "Received introductory training and briefings on SAP systems. Participated in internal corporate meetings. Contributed to ongoing projects by providing assistance in various tasks.",
+    logo: opetLogo,
+    icon: SiSap,
   },
 ];
 

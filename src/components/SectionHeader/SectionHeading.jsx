@@ -1,5 +1,5 @@
-import "../styles/SectionHeading.css";
-import { useTheme } from "../context/ThemeContext";
+import "../../styles/SectionHeading.css";
+import { useTheme } from "../../context/ThemeContext";
 
 export default function SectionHeading({ children }) {
   const { theme } = useTheme();

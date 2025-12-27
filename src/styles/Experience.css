@@ -13,3 +13,8 @@
     max-width: 450px;
     }
 }
+.vertical-timeline::before {
+  background-color: rgb(179, 188, 188) !important;
+  border-radius: 5px;
+  width: 3px;
+}

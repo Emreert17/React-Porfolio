@@ -1,7 +1,7 @@
-import SectionHeading from "./SectionHeading";
-import "../styles/Contact.css";
 import { BsEnvelopeAtFill } from "react-icons/bs";
-import { useTheme } from "../context/ThemeContext";
+import SectionHeading from "../SectionHeader/SectionHeading";
+import "../../styles/Contact.css";
+import { useTheme } from "../../context/ThemeContext";
 
 export default function Contact() {
   const { theme } = useTheme();

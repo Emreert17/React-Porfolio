@@ -1,8 +1,6 @@
-import { FaGithub } from "react-icons/fa";
-import "../styles/Project.css";
-import { FaReact } from "react-icons/fa";
-import { FaJs } from "react-icons/fa";
+import "../../styles/Project.css";
 import { SiRedux } from "react-icons/si";
+import { FaGithub, FaJs, FaReact } from "react-icons/fa";
 
 export default function Project({ project }) {
   return (

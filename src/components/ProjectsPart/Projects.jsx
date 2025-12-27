@@ -1,7 +1,7 @@
-import { projects_Data } from "../data/data";
+import { projects_Data } from "../../data/data";
 import Project from "./Project";
-import SectionHeading from "./SectionHeading";
-import "../styles/Projects.css";
+import SectionHeading from "../SectionHeader/SectionHeading";
+import "../../styles/Projects.css";
 
 export default function Projects() {
   return (

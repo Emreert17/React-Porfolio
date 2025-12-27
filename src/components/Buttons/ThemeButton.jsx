@@ -1,4 +1,4 @@
-import { useTheme } from "../context/ThemeContext";
+import { useTheme } from "../../context/ThemeContext";
 import { LuSun } from "react-icons/lu";
 import { MdOutlineNightlight } from "react-icons/md";
 

@@ -1,7 +1,7 @@
-import SectionHeading from "./SectionHeading";
-import { skillsData } from "../data/data";
-import "../styles/Skills.css";
 import { useState } from "react";
+import SectionHeading from "../SectionHeader/SectionHeading";
+import { skillsData } from "../../data/data";
+import "../../styles/Skills.css";
 import Skill from "./Skill";
 
 export default function Skills() {
