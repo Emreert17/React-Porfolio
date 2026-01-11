@@ -2,6 +2,7 @@ import React from "react";
 import ParticleContainer from "./ParticleContainer";
 import "../../styles/Intro.css";
 import { intro_info } from "../../data/data";
+import IntroTextCard from "./İntroTextCard";
 const info = intro_info[0];
 
 export default function Intro() {
@@ -16,7 +17,11 @@ export default function Intro() {
               src={info.image}
               alt={info.imageDesc}
             />
-            <p className="intro-text">{info.description}</p>
+            <div className="intro-text">
+              {info.description.map((description) => (
+                <IntroTextCard key={description.id} description={description} />
+              ))}
+            </div>
             <div className="button-group">
               {info.links.map((link) => (
                 <a

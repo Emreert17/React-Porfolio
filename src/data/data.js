@@ -33,8 +33,20 @@ export const links = [
 
 export const intro_info = [
   {
-    description:
-      "Hi, I'm Emre! I'm a Senior Software Engineering student at Istanbul Aydın University, mainly focused on frontend development. I work with HTML, CSS, JavaScript, and React and I also have a solid background in Java. I love creating clean, modern, and user-centered web interfaces that solve real problems.",
+    description: [
+      {
+        id: 1,
+        title: "Who I Am",
+        description:
+          "Hi, I’m Emre 👋 A Senior Software Engineering student focused on frontend development.",
+      },
+      {
+        id: 2,
+        title: "What I Do",
+        description:
+          "I design and build modern, scalable frontend applications with React, Next.js, and TypeScript.",
+      },
+    ],
     image: "/intro-pic.jpg",
     imageDesc: "profile-picture",
     links: [
@@ -57,12 +69,15 @@ export const intro_info = [
 export const projects_Data = [
   {
     id: 1,
-    title: "Food Delivery App",
+    title: "News App",
     description:
-      "Food Delivery App built with React and Redux featuring user authentication, dynamic menus, and cart management. Users can log in, browse dishes, filter and sort items. ",
-    image: "/FoodApp.png",
-    link: "https://github.com/Emreert17/React-Redux-FoodDeliveryApp",
-    isRedux: true,
+      "News App is a modern web application built with Next.js, TypeScript, and Tailwind CSS. It allows users to browse trending news, search articles in real time, and save their favorite stories.",
+    image: "/news-app.png",
+    link: "https://github.com/Emreert17/Next.js-News-App",
+    icons: [
+      { id: 1, icon: RiNextjsFill, color: "#333" },
+      { id: 2, icon: BiLogoTypescript, color: "#1C6EA4" },
+    ],
   },
   {
     id: 2,
@@ -71,24 +86,37 @@ export const projects_Data = [
       "Track income and expenses, categorize spending, set budget goals, and get a clear overview of your finances. Built with a clean, interactive React interface for a seamless user experience.",
     image: "/budgetapp.png",
     link: "https://github.com/Emreert17/React-Redux-Expense-Tracker",
-    isRedux: true,
+    icons: [
+      { id: 1, icon: FaReact, color: "#33A1E0" },
+      { id: 2, icon: FaJs, color: "#FFE100" },
+      { id: 3, icon: SiRedux, color: "#9929EA" },
+    ],
   },
   {
     id: 3,
+    title: "Food Delivery App",
+    description:
+      "Food Delivery App built with React and Redux featuring user authentication, dynamic menus, and cart management. Users can log in, browse dishes, filter and sort items. ",
+    image: "/foodapp.png",
+    link: "https://github.com/Emreert17/React-Redux-FoodDeliveryApp",
+    icons: [
+      { id: 1, icon: FaReact, color: "#33A1E0" },
+      { id: 2, icon: FaJs, color: "#FFE100" },
+      { id: 3, icon: SiRedux, color: "#9929EA" },
+    ],
+  },
+  {
+    id: 4,
     title: "Weather App",
     description:
       "  A responsive application that retrieves live weather data from an external API, showing temperature, conditions, and location details. Users can search by city name and get instant, accurate forecasts.",
     image: "/WeatherApp.png",
     link: "https://github.com/Emreert17/React-Redux-Query-WeatherApp",
-    isRedux: true,
-  },
-  {
-    id: 4,
-    title: "To-Do List",
-    description:
-      "  A task management app designed to help users organize and prioritize daily activities. Supports adding, editing, and deleting tasks, with a simple, intuitive, and clutter-free interface.",
-    image: "/ToDoList.png",
-    link: "https://github.com/Emreert17/React-ToDoList2",
+    icons: [
+      { id: 1, icon: FaReact, color: "#33A1E0" },
+      { id: 2, icon: FaJs, color: "#FFE100" },
+      { id: 3, icon: SiRedux, color: "#9929EA" },
+    ],
   },
   {
     id: 5,
@@ -97,6 +125,10 @@ export const projects_Data = [
       " A simple and interactive Quiz Application built with React.Users can test their knowledge by answering multiple-choice questions, track their score in real-time, and review their selected answers at the end of the quiz.",
     image: "/QuizApp.png",
     link: "https://github.com/Emreert17/React-QuizApp",
+    icons: [
+      { id: 1, icon: FaReact, color: "#33A1E0" },
+      { id: 2, icon: FaJs, color: "#FFE100" },
+    ],
   },
 ];
 
@@ -128,7 +160,7 @@ export const skillsData = [
 export const experience_Data = [
   {
     id: 1,
-    date: "November 2025 - Present",
+    date: "November 2025 - January 2026",
     title: "Frontend Internship",
     subtitle: "enoca",
     description:
