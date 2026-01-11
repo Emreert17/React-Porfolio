@@ -97,7 +97,7 @@ export const projects_Data = [
     title: "Food Delivery App",
     description:
       "Food Delivery App built with React and Redux featuring user authentication, dynamic menus, and cart management. Users can log in, browse dishes, filter and sort items. ",
-    image: "/foodapp.png",
+    image: "/FoodApp.png",
     link: "https://github.com/Emreert17/React-Redux-FoodDeliveryApp",
     icons: [
       { id: 1, icon: FaReact, color: "#33A1E0" },
