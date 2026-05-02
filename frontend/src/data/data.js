@@ -46,13 +46,13 @@ export const intro_info = [
         id: 1,
         title: "Who I Am",
         description:
-          "Hi, I’m Emre 👋 A Senior Software Engineering student focused on frontend development.",
+          "Hi, I’m Emre 👋 A Senior Software Engineering student focused on fullstack development.",
       },
       {
         id: 2,
         title: "What I Do",
         description:
-          "I design and build modern, scalable frontend applications with React, Next.js, and TypeScript.",
+          "I work with React, Next.js and TypeScript on the frontend, and Node.js (Express, Next.js API routes) on the backend.",
       },
     ],
     image: "/intro-pic.jpg",
