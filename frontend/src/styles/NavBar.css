@@ -1,66 +1,93 @@
+/* ─── Floating pill navbar ─────────────────────────────────── */
 .navbar {
   position: fixed;
   top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: center;
-  gap: 12px;
-  padding: 15px 20px;
-  background-color: #e5e7eb;
+  align-items: center;
+  gap: 4px;
+  padding: 6px;
+  background: rgba(10, 8, 24, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 9999px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(99, 102, 241, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
   z-index: 1000;
+  white-space: nowrap;
 }
+
+/* ─── Link wrapper (anchors the motion highlight) ──────────── */
 .nav-item-wrapper {
   position: relative;
 }
+
+/* ─── Link text / icon ─────────────────────────────────────── */
 .nav-link {
   position: relative;
-  z-index: 1; 
-  font-size: 12px;
-  text-decoration: none;
-  padding: 12px 18px;
-  text-transform: uppercase;
-  color: rgb(107 114 128);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 11px;
+  font-family: "Rubik", sans-serif;
   font-weight: 500;
-  transition: color 0.2s ease-in-out;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  color: #6b7280;
+  transition: color 0.2s ease;
 }
+
 .nav-link:hover {
-  color: #333;
+  color: #d1d5db;
 }
+
+.nav-link.active {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ─── Animated active highlight (framer-motion) ────────────── */
 .nav-highlight {
   position: absolute;
-  top: 0; 
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   border-radius: 9999px;
-  background-color:#ccc;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  box-shadow: 0 0 18px rgba(99, 102, 241, 0.5);
   z-index: 0;
 }
-.nav-link.active {
-  color: #333;
-  font-weight: bold;
-}
- @media (max-width: 671px){
+
+/* ─── Mobile — icon-only ───────────────────────────────────── */
+@media (max-width: 671px) {
+  .navbar {
+    padding: 8px 10px;
+    gap: 4px;
+  }
+
   .nav-item-wrapper {
-    width: 30px;
-    height: 30px;
+    width: 38px;
+    height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .navbar{
-    width: 80%;
-    min-height: 25px;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 12px;
-  }
+
   .nav-link {
-    padding: 0 px;
-    font-size: 20px; 
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
   }
-   .nav-highlight {
+
+  .nav-highlight {
     border-radius: 50%;
   }
- }
+}
