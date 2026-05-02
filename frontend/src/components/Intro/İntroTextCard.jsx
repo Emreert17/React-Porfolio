@@ -1,3 +1,4 @@
+import React from "react";
 import "../../styles/Intro.css";
 export default function IntroTextCard({ description }) {
   return (

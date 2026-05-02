@@ -8,7 +8,7 @@ export default function Skill({ items }) {
           {item.icon && (
             <span>
               {React.createElement(item.icon, {
-                size: 35,
+                size: 30,
                 color: item.color,
               })}
             </span>

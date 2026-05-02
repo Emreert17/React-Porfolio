@@ -28,7 +28,7 @@ export default function Skills() {
           {skillsData.map((tab) =>
             activeTab === tab.id ? (
               <Skill key={tab.id} items={tab.items} />
-            ) : null
+            ) : null,
           )}
         </div>
       </section>

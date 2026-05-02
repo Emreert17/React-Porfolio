@@ -5,9 +5,17 @@ import {
   FaGitAlt,
   FaGithub,
   FaReact,
+  FaNodeJs,
 } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
-import { SiRedux, SiSap } from "react-icons/si";
+import {
+  SiRedux,
+  SiSap,
+  SiExpress,
+  SiMongodb,
+  SiClaude,
+  SiOpenai,
+} from "react-icons/si";
 import { BiLogoTypescript } from "react-icons/bi";
 import { PiBracketsCurly } from "react-icons/pi";
 import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
@@ -148,15 +156,25 @@ export const skillsData = [
     ],
   },
   {
+    id: "backend",
+    category: "Backend",
+    items: [
+      { name: "Node.js", icon: FaNodeJs, color: "#6CA651" },
+      { name: "Express.js", icon: SiExpress, color: "#333" },
+      { name: "MongoDB", icon: SiMongodb, color: "#48A111" },
+    ],
+  },
+  {
     id: "tools",
     category: "Tools",
     items: [
       { name: "Git", icon: FaGitAlt, color: "#DC2525" },
       { name: "GitHub", icon: FaGithub, color: "#333" },
+      { name: "Claude", icon: SiClaude, color: "#FF8C00" },
+      { name: "OpenAI", icon: SiOpenai, color: "#333" },
     ],
   },
 ];
-
 export const experience_Data = [
   {
     id: 1,
