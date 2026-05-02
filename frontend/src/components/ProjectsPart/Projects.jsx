@@ -5,13 +5,11 @@ import "../../styles/Projects.css";
 
 export default function Projects() {
   return (
-    <>
-      <section id="projects" className="projects-container">
-        <SectionHeading>My Projects</SectionHeading>
-        {projects_Data.map((project) => (
-          <Project key={project.id} project={project} />
-        ))}
-      </section>
-    </>
+    <section id="projects" className="projects-container">
+      <SectionHeading>My Projects</SectionHeading>
+      {projects_Data.map((project, index) => (
+        <Project key={project.id} project={project} index={index} />
+      ))}
+    </section>
   );
 }

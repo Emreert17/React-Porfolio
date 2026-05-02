@@ -18,7 +18,7 @@ export default function ParticleContainer() {
       fullScreen: { enable: false },
       background: {
         color: {
-          value: "#111827",
+          value: "transparent",
         },
       },
       fpsLimit: 120,
@@ -55,13 +55,13 @@ export default function ParticleContainer() {
       },
       particles: {
         color: {
-          value: "#ffffff",
+          value: "#818cf8",
         },
         links: {
-          color: "#ffffff",
+          color: "#6366f1",
           distance: 150,
           enable: true,
-          opacity: 0.2,
+          opacity: 0.15,
           width: 1,
         },
         move: {
@@ -82,12 +82,12 @@ export default function ParticleContainer() {
         number: {
           density: {
             enable: true,
-            area: 800,
+            area: 900,
           },
-          value: 80,
+          value: 60,
         },
         opacity: {
-          value: 0.3,
+          value: 0.45,
           random: false,
           anim: {
             enable: false,

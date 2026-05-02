@@ -1,5 +1,5 @@
 import SectionHeading from "../SectionHeader/SectionHeading";
-import { FaPaperPlane } from "react-icons/fa";
+import { FaPaperPlane, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import "../../styles/Contact.css";
 import { useTheme } from "../../context/ThemeContext";
 import { useState } from "react";
@@ -10,6 +10,7 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("");
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,6 +27,8 @@ export default function Contact() {
         setName("");
         setEmail("");
         setMessage("");
+        setSuccess(true);
+        setTimeout(() => setSuccess(false), 4000);
       } else {
         setStatus(data.error);
       }
@@ -36,52 +39,88 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="contact-container">
+    <section id="contact" className="contact-section">
       <SectionHeading>Get in Touch</SectionHeading>
-      <div className="inner-contact-container">
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <p className="contact-info">
-            Please contact me directly at{" "}
-            <a href="mailto:emre.ertugrul.dev@outlook.com">
-              emre.ertugrul.dev@outlook.com
-            </a>
-            or through this form.
+      <div className={`contact-wrapper ${theme}`}>
+
+        <div className="contact-info-panel">
+          <span className="contact-availability">
+            <span className="availability-dot" />
+            Available for opportunities
+          </span>
+          <h3 className="contact-tagline">Let's build something great together.</h3>
+          <p className="contact-bio">
+            Have a project in mind, a question, or just want to say hello? Fill out the form and I'll get back to you soon.
           </p>
-          <input
-            value={name}
-            onChange={(e) => {
-              setName(e.target.value);
-              setStatus("");
-            }}
-            type="text"
-            name="name"
-            placeholder="Name"
-          />
-          <input
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-              setStatus("");
-            }}
-            type="email"
-            name="email"
-            placeholder="Email"
-          />
-          <textarea
-            value={message}
-            onChange={(e) => {
-              setMessage(e.target.value);
-              setStatus("");
-            }}
-            name="message"
-            id="message"
-            placeholder="Message"
-          ></textarea>
-          {status && <p className="error-message">{status}</p>}
-          <button className="contact-btn" type="submit">
-            Submit <FaPaperPlane />
+          <div className="contact-links">
+            <a href="mailto:emre.ertugrul.dev@outlook.com" className="contact-link-item">
+              <span className="contact-link-icon">
+                <FaEnvelope />
+              </span>
+              <span>emre.ertugrul.dev@outlook.com</span>
+            </a>
+          </div>
+          <div className="contact-socials">
+            <a href="#" className="social-pill" aria-label="GitHub">
+              <FaGithub /> GitHub
+            </a>
+            <a href="#" className="social-pill" aria-label="LinkedIn">
+              <FaLinkedin /> LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <form className="contact-form" onSubmit={handleSubmit} noValidate>
+          <div className="form-field">
+            <input
+              value={name}
+              onChange={(e) => { setName(e.target.value); setStatus(""); }}
+              type="text"
+              name="name"
+              id="cf-name"
+              placeholder=" "
+              required
+              autoComplete="name"
+            />
+            <label htmlFor="cf-name">Your Name</label>
+          </div>
+          <div className="form-field">
+            <input
+              value={email}
+              onChange={(e) => { setEmail(e.target.value); setStatus(""); }}
+              type="email"
+              name="email"
+              id="cf-email"
+              placeholder=" "
+              required
+              autoComplete="email"
+            />
+            <label htmlFor="cf-email">Email Address</label>
+          </div>
+          <div className="form-field form-field--textarea">
+            <textarea
+              value={message}
+              onChange={(e) => { setMessage(e.target.value); setStatus(""); }}
+              name="message"
+              id="cf-message"
+              placeholder=" "
+              required
+            />
+            <label htmlFor="cf-message">Your Message</label>
+          </div>
+          {status && (
+            <p className="form-feedback form-feedback--error">{status}</p>
+          )}
+          {success && (
+            <p className="form-feedback form-feedback--success">
+              Message sent! I'll get back to you soon.
+            </p>
+          )}
+          <button className="contact-submit" type="submit">
+            Send Message <FaPaperPlane />
           </button>
         </form>
+
       </div>
     </section>
   );

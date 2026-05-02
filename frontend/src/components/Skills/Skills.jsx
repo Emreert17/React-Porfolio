@@ -8,10 +8,10 @@ export default function Skills() {
   const [activeTab, setActiveTab] = useState("frontend");
 
   return (
-    <>
-      <section id="skills" className="skills-container">
-        <SectionHeading>My Skills</SectionHeading>
-        <div className="skills-button-container">
+    <section id="skills" className="skills-container">
+      <SectionHeading>My Skills</SectionHeading>
+      <div className="skills-tab-bar">
+        <div className="skills-tab-group">
           {skillsData.map((skill, index) => (
             <button
               onClick={() => setActiveTab(skill.id)}
@@ -24,14 +24,14 @@ export default function Skills() {
             </button>
           ))}
         </div>
-        <div className="skills-content-container">
-          {skillsData.map((tab) =>
-            activeTab === tab.id ? (
-              <Skill key={tab.id} items={tab.items} />
-            ) : null,
-          )}
-        </div>
-      </section>
-    </>
+      </div>
+      <div className="skills-content-container">
+        {skillsData.map((tab) =>
+          activeTab === tab.id ? (
+            <Skill key={tab.id} items={tab.items} />
+          ) : null,
+        )}
+      </div>
+    </section>
   );
 }

@@ -5,15 +5,9 @@ export default function Skill({ items }) {
     <>
       {items.map((item, index) => (
         <div className="skill" key={index}>
-          {item.icon && (
-            <span>
-              {React.createElement(item.icon, {
-                size: 30,
-                color: item.color,
-              })}
-            </span>
-          )}
-          {item.name}
+          {item.icon &&
+            React.createElement(item.icon, { size: 32, color: item.color })}
+          <span className="skill-name">{item.name}</span>
         </div>
       ))}
     </>

@@ -12,11 +12,13 @@ export default function Intro() {
         <ParticleContainer />
         <div className="inner-particle-container">
           <div className="intro-content">
-            <img
-              className="intro-picture"
-              src={info.image}
-              alt={info.imageDesc}
-            />
+            <div className="intro-picture-wrapper">
+              <img
+                className="intro-picture"
+                src={info.image}
+                alt={info.imageDesc}
+              />
+            </div>
             <div className="intro-text">
               {info.description.map((description) => (
                 <IntroTextCard key={description.id} description={description} />
