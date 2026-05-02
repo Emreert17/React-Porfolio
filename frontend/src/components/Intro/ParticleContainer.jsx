@@ -16,110 +16,73 @@ export default function ParticleContainer() {
   const options = useMemo(
     () => ({
       fullScreen: { enable: false },
+
       background: {
         color: {
           value: "transparent",
         },
       },
-      fpsLimit: 120,
+
+      fpsLimit: 60,
+
       interactivity: {
         events: {
           onClick: {
             enable: false,
-            mode: "push",
           },
           onHover: {
-            enable: true,
-            mode: "grab",
+            enable: false, // ❌ hover kapalı (performans fix)
           },
           resize: true,
         },
-        modes: {
-          grab: {
-            distance: 150,
-            line_linked: {
-              opacity: 1,
-            },
-          },
-          push: {
-            particles_nb: 4,
-          },
-          remove: {
-            particles_nd: 2,
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4,
-          },
-        },
       },
+
       particles: {
         color: {
           value: "#818cf8",
         },
+
         links: {
           color: "#6366f1",
-          distance: 150,
+          distance: 140,
           enable: true,
-          opacity: 0.15,
+          opacity: 0.08, // ↓ daha hafif
           width: 1,
         },
+
         move: {
           direction: "none",
           enable: true,
           outModes: {
-            default: "bounce",
+            default: "out", // ❌ bounce yerine out (çok daha hafif)
           },
-          random: false,
-          speed: 2,
-          straight: false,
-          attract: {
-            enable: false,
-            rotateX: 600,
-            rotateY: 1200,
-          },
+          speed: 1.2, // ↓ düşürüldü
         },
+
         number: {
           density: {
             enable: true,
             area: 900,
           },
-          value: 60,
+          value: 35, // 🔥 60 → 35 (performans fix)
         },
+
         opacity: {
-          value: 0.45,
-          random: false,
-          anim: {
-            enable: false,
-            speed: 1,
-            opacity_min: 0.1,
-            sync: false,
-          },
+          value: 0.4,
         },
+
         shape: {
           type: "circle",
-          stroke: {
-            width: 0,
-            color: "#000000",
-          },
-          polygon: {
-            nb_sides: 5,
-          },
         },
+
         size: {
-          value: 2,
-          random: true,
-          anim: {
-            enable: false,
-            speed: 40,
-            size_min: 0.1,
-            sync: false,
-          },
+          value: { min: 1, max: 2 },
         },
       },
+
       detectRetina: true,
     }),
-    []
+    [],
   );
 
   if (!ready) return null;

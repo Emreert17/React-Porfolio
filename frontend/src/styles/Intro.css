@@ -1,3 +1,8 @@
+/* ─── Global safety fix ─────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+}
+
 /* ─── Particles canvas ─────────────────────────────────────── */
 #tsparticles {
   position: absolute !important;
@@ -17,7 +22,7 @@
   margin-bottom: 80px;
 }
 
-/* ─── Centered wrapper ─────────────────────────────────────── */
+/* ─── Center wrapper (FIXED) ───────────────────────────────── */
 .inner-particle-container {
   width: 100%;
   min-height: 100vh;
@@ -31,17 +36,17 @@
   padding: 80px 24px 60px;
 }
 
-/* ─── Content column ───────────────────────────────────────── */
+/* ─── Content column (FIXED CENTER LOGIC) ──────────────────── */
 .intro-content {
-  width: 55%;
-  max-width: 700px;
+  width: min(700px, 100%);
   display: flex;
   flex-direction: column;
   gap: 28px;
   align-items: center;
+  margin: 0 auto;
 }
 
-/* ─── Profile image — gradient ring ───────────────────────── */
+/* ─── Profile image ───────────────────────────────────────── */
 .intro-picture-wrapper {
   padding: 3px;
   border-radius: 50%;
@@ -62,25 +67,24 @@
   display: block;
 }
 
-/* ─── Info cards ───────────────────────────────────────────── */
+/* ─── Info cards (GRID FIXED) ──────────────────────────────── */
 .intro-text {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
-  font-family: "Rubik", sans-serif;
   width: 100%;
-  animation: fadeInUp 0.7s ease-out 0.25s both;
 }
 
+/* ─── Card ─────────────────────────────────────────────────── */
 .intro-text-card {
+  width: 100%;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   padding: 22px 20px;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  transition: border-color 0.3s ease, background 0.3s ease,
-    transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .intro-text-card:hover {
@@ -104,32 +108,28 @@
   color: #9ca3af;
   line-height: 1.75;
   margin: 0;
-  font-weight: 400;
 }
 
-/* ─── CTA buttons ──────────────────────────────────────────── */
+/* ─── Buttons ─────────────────────────────────────────────── */
 .button-group {
   display: flex;
   justify-content: center;
   gap: 12px;
   pointer-events: auto;
-  animation: fadeInUp 0.7s ease-out 0.5s both;
 }
 
 .btn-intro {
-  text-decoration: none;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   font-size: 14px;
   font-weight: 600;
-  font-family: "Rubik", sans-serif;
-  letter-spacing: 0.025em;
   padding: 12px 28px;
   border-radius: 999px;
-  border: none;
   cursor: pointer;
-  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+  text-decoration: none;
+  transition: all 0.22s ease;
   background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
   color: #fff;
   box-shadow: 0 4px 16px rgba(99, 102, 241, 0.45);
@@ -150,9 +150,6 @@
 .btn-intro.btn-2:hover {
   background: rgba(99, 102, 241, 0.12);
   border-color: rgba(99, 102, 241, 0.45);
-  color: #e5e7eb;
-  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.2);
-  transform: translateY(-2px);
 }
 
 /* ─── Animations ───────────────────────────────────────────── */
@@ -167,27 +164,11 @@
   }
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ─── Responsive: mobile ───────────────────────────────────── */
+/* ─── MOBILE FIX ───────────────────────────────────────────── */
 @media (max-width: 640px) {
   .inner-particle-container {
     padding: 90px 20px 50px;
     align-items: flex-start;
-  }
-
-  .intro-content {
-    width: 100%;
-    gap: 22px;
   }
 
   .intro-picture {
@@ -197,15 +178,6 @@
 
   .intro-text {
     grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .intro-text-card {
-    padding: 18px 16px;
-  }
-
-  .intro-text-card p {
-    font-size: 13px;
   }
 
   .button-group {
@@ -213,22 +185,12 @@
     width: 100%;
     max-width: 260px;
   }
-
-  .btn-intro {
-    justify-content: center;
-    padding: 12px 20px;
-  }
 }
 
-/* ─── Responsive: tablet ───────────────────────────────────── */
+/* ─── TABLET FIX ───────────────────────────────────────────── */
 @media (min-width: 641px) and (max-width: 1024px) {
   .intro-content {
-    width: 78%;
-  }
-
-  .intro-picture {
-    width: 130px;
-    height: 130px;
+    width: min(600px, 92%);
   }
 
   .intro-text-card p {
